@@ -29,5 +29,5 @@ jobs:
         project: 1
         column: "To do"
         close-previous: false
-        pinned: true - didn't get this to work yet
-        linked-comments: true - didn't get this to work yet
+        pinned: true # didn't get this to work yet
+        linked-comments: true # didn't get this to work yet

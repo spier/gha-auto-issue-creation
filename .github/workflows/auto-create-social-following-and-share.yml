@@ -1,11 +1,11 @@
 # https://docs.github.com/en/actions/guides/scheduling-issue-creation
 # https://github.com/marketplace/actions/issue-bot-action
-# https://github.com/imjohnbo/extract-issue-template-fields
+# https://github.com/marketplace/actions/extract-issue-template-fields
 
 on:
   issues:
     types: [closed]
-    
+
 name: IssueOps - Create issue for "Social following and share" once the previous issues is closed
 
 jobs:
@@ -28,5 +28,6 @@ jobs:
         body: ${{ steps.extract.outputs.body }}
         project: 1
         column: "To do"
-        # pinned: true - didn't get this to work yet
-        # linked-comments: true - didn't get this to work yet
+        close-previous: false
+        pinned: true - didn't get this to work yet
+        linked-comments: true - didn't get this to work yet

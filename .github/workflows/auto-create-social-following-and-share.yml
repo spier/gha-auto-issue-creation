@@ -26,3 +26,4 @@ jobs:
         labels: ${{ steps.extract.outputs.labels }}
         title: ${{ steps.extract.outputs.title }}
         body: ${{ steps.extract.outputs.body }}
+        project: 1

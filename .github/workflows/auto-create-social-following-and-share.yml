@@ -28,3 +28,5 @@ jobs:
         body: ${{ steps.extract.outputs.body }}
         project: 1
         column: "To do"
+        pinned: true
+        linked-comments: true

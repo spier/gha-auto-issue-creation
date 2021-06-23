@@ -1,0 +1,22 @@
+# https://docs.github.com/en/actions/guides/scheduling-issue-creation
+# https://github.com/marketplace/actions/issue-bot-action
+# https://github.com/marketplace/actions/extract-issue-template-fields
+
+on:
+  issues:
+    types: [labeled]
+
+name: IssueOps - Move issues to projects
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign issue to Project: Website
+        uses: alex-page/github-project-automation-plus@v0.7.1
+        if: contains(github.event.issue.labels.*.name, 'project-website')
+        with:
+          project: Website
+          column: To do
+      - name: Prevent GHA failure
+        run: echo This GHA is done.

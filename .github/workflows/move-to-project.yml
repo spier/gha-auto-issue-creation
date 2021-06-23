@@ -18,5 +18,6 @@ jobs:
         with:
           project: Website
           column: To do
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Prevent GHA failure
         run: echo This GHA is done.

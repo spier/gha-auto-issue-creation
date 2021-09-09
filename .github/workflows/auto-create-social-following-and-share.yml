@@ -19,8 +19,9 @@ jobs:
       with:
         path: .github/ISSUE_TEMPLATE/social-following-and-share.md
 
-    # Create new issue with assignees, labels, title, and body
-    - uses: imjohnbo/issue-bot@v3
+    # Create new issue with assignees, labels, title, and body based on the
+    # template defined in the previous step
+    - uses: imjohnbo/issue-bot@fix/issue-51
       with:
         assignees: ${{ steps.extract.outputs.assignees }}
         labels: ${{ steps.extract.outputs.labels }}
@@ -29,5 +30,5 @@ jobs:
         project: 1
         column: "To do"
         # close-previous: false
-        # pinned: true # didn't get this to work yet
-        # linked-comments: true # didn't get this to work yet
+        pinned: true
+        linked-comments: true

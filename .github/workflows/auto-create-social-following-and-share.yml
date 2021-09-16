@@ -21,7 +21,7 @@ jobs:
 
     # Create new issue with assignees, labels, title, and body based on the
     # template defined in the previous step
-    - uses: imjohnbo/issue-bot@v3
+    - uses: imjohnbo/issue-bot@v3.3.3
       with:
         assignees: ${{ steps.extract.outputs.assignees }}
         labels: ${{ steps.extract.outputs.labels }}
